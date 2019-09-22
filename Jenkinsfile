@@ -7,7 +7,7 @@ node {
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
-        app = docker.build("dockerhubvasudev/firstpipeline-example:${env.BUILD_NUMBER}")
+        app = docker.build("dockerhubvasudev/sample-eureka-testing:${env.BUILD_NUMBER}")
     }
     stage('Test image') {
         /* Ideally, we would run a test framework against our image.
